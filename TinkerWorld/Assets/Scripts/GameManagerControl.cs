@@ -10,7 +10,10 @@ public static class GameManagerControl
 
 
 
-
+    public static void Update()
+    {
+        level = SceneManager.GetActiveScene().buildIndex;
+    }
 
    
 
