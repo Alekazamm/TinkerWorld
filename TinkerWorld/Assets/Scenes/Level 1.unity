@@ -422,7 +422,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.47099093, y: -0.018284783}
@@ -1313,7 +1313,6 @@ MonoBehaviour:
   dimRb: {fileID: 1213484444}
   dimmovementSpeed: 7
   dimisGrounded: 0
-  gameManager: {fileID: 0}
 --- !u!1 &1277594884
 GameObject:
   m_ObjectHideFlags: 0
@@ -1664,7 +1663,6 @@ MonoBehaviour:
   jimRb: {fileID: 1547482675}
   jimMovementSpeed: 7
   jimIsGrounded: 0
-  gameManager: {fileID: 0}
 --- !u!50 &1547482675
 Rigidbody2D:
   serializedVersion: 4

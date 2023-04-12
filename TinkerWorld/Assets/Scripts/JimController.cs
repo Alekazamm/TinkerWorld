@@ -73,15 +73,15 @@ public class JimController : MonoBehaviour
         {
             jimIsGrounded = true;
         }
-       
-    }
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.name == "LevelEnd")
+        if (collision.collider.name == "LevelEnd")
         {
+            Debug.Log("SUUUU");
             GameManagerControl.NextLevel();
         }
+
     }
+
+
+   
 }

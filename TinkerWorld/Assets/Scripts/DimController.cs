@@ -73,13 +73,16 @@ public class DimController : MonoBehaviour
             dimisGrounded = true;
         }
 
+        if (collision.collider.name == "LevelEnd")
+        {
+            Debug.Log("SUUUU");
+            GameManagerControl.NextLevel();
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.name == "LevelEnd")
-        {
-            GameManagerControl.NextLevel();
-        }
+        
     }
 }
