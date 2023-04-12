@@ -5,13 +5,13 @@ using UnityEngine;
 public class CrateController : MonoBehaviour
 {
 
-    public GameObject rightWall;
+    public GameObject deleteThis;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        rightWall.SetActive(true);
+        deleteThis.SetActive(true);
     }
 
     // Update is called once per frame
@@ -32,6 +32,6 @@ public class CrateController : MonoBehaviour
 
     void ButtonPushed()
     {
-        rightWall.SetActive(false);
+        deleteThis.SetActive(false);
     }
 }
