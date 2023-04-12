@@ -772,7 +772,7 @@ GameObject:
   - component: {fileID: 1213484444}
   m_Layer: 0
   m_Name: Ker
-  m_TagString: Untagged
+  m_TagString: Jumpable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -919,10 +919,9 @@ GameObject:
   - component: {fileID: 1547482676}
   - component: {fileID: 1547482675}
   - component: {fileID: 1547482674}
-  - component: {fileID: 1547482677}
   m_Layer: 0
   m_Name: Tin
-  m_TagString: Untagged
+  m_TagString: Jumpable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1056,24 +1055,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!256 &1547482677
-FrictionJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1547482671}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 932956667}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -4.673062, y: -0.82137424}
-  m_MaxForce: 1
-  m_MaxTorque: 1
 --- !u!1 &1547907689
 GameObject:
   m_ObjectHideFlags: 0
