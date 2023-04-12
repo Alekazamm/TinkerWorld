@@ -11,8 +11,9 @@ public class DimController : MonoBehaviour
     public float dimmovementSpeed = 20;
 
     public bool dimisGrounded;
+    public MenuManager menuManager;
 
-    
+
 
 
     // Start is called before the first frame update
@@ -72,5 +73,13 @@ public class DimController : MonoBehaviour
             dimisGrounded = true;
         }
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.name == "LevelEnd")
+        {
+            menuManager.NextLevel();
+        }
     }
 }
