@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 public class Countdown : MonoBehaviour
+
 {
+    public GameObject ground;
     [SerializeField]
     public TextMeshProUGUI text;
 
@@ -31,7 +33,7 @@ public class Countdown : MonoBehaviour
 
     public void Lava()
     {
-
+        ground.SetActive(false);
     }
 
 }
