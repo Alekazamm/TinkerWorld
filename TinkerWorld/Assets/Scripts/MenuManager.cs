@@ -3,18 +3,8 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class GameManagerControl : MonoBehaviour
+public class MenuManager : MonoBehaviour
 {
-
-    public float level;
-
-
-    private void Awake()
-    {
-        DontDestroyOnLoad(this);
-    }
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -25,5 +15,10 @@ public class GameManagerControl : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void Play()
+    {
+        SceneManager.LoadScene(1);
     }
 }
