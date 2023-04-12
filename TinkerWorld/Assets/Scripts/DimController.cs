@@ -75,7 +75,7 @@ public class DimController : MonoBehaviour
 
         if (collision.collider.name == "LevelEnd")
         {
-            Debug.Log("SUUUU");
+           
             GameManagerControl.NextLevel();
         }
 

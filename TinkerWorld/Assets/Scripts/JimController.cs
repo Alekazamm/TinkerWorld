@@ -76,7 +76,7 @@ public class JimController : MonoBehaviour
 
         if (collision.collider.name == "LevelEnd")
         {
-            Debug.Log("SUUUU");
+           
             GameManagerControl.NextLevel();
         }
 
