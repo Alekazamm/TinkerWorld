@@ -60,7 +60,7 @@ public class DimController : MonoBehaviour
 
     void dimJump()
     {
-        dimRb.AddForce(new Vector2(0, 300));
+        dimRb.AddForce(new Vector2(0, 350));
 
     }
 

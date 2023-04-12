@@ -60,7 +60,7 @@ public class JimController : MonoBehaviour
 
     void Jump()
     {
-        jimRb.AddForce(new Vector2(0, 300));
+        jimRb.AddForce(new Vector2(0, 350));
         
     }
 
