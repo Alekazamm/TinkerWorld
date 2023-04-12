@@ -708,7 +708,6 @@ MonoBehaviour:
   jimRb: {fileID: 1454204081}
   jimMovementSpeed: 7
   jimIsGrounded: 0
-  gameManager: {fileID: 0}
 --- !u!50 &1454204081
 Rigidbody2D:
   serializedVersion: 4
@@ -939,7 +938,6 @@ MonoBehaviour:
   dimRb: {fileID: 1520363902}
   dimmovementSpeed: 7
   dimisGrounded: 0
-  gameManager: {fileID: 0}
 --- !u!212 &1520363905
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1043,6 +1041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 109c76708d0130648a36c2ca4e6d479a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ground: {fileID: 317063802}
   text: {fileID: 1920955683}
 --- !u!114 &1920955683
 MonoBehaviour:
