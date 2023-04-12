@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 797971092}
   - component: {fileID: 797971091}
   m_Layer: 0
-  m_Name: Square
+  m_Name: LevelEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -661,6 +661,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &974494195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 974494196}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &974494196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974494195}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.242807, y: 1.5525427, z: 0.13187459}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1035214335
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,6 +1344,7 @@ MonoBehaviour:
   dimRb: {fileID: 1213484444}
   dimmovementSpeed: 7
   dimisGrounded: 0
+  menuManager: {fileID: 0}
 --- !u!1 &1277594884
 GameObject:
   m_ObjectHideFlags: 0
@@ -1663,6 +1695,7 @@ MonoBehaviour:
   jimRb: {fileID: 1547482675}
   jimMovementSpeed: 7
   jimIsGrounded: 0
+  menuManager: {fileID: 0}
 --- !u!50 &1547482675
 Rigidbody2D:
   serializedVersion: 4

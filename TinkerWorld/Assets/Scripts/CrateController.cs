@@ -25,7 +25,7 @@ public class CrateController : MonoBehaviour
         if (collision.name == "Button")
         {
             ButtonPushed();
-            Debug.Log("SUUUUUUU");
+          
         }
     }
 

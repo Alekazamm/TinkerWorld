@@ -12,11 +12,13 @@ public class JimController : MonoBehaviour
 
     public bool jimIsGrounded;
 
+    public MenuManager menuManager;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        menuManager = GetComponent<MenuManager>();
     }
 
     // Update is called once per frame
@@ -72,5 +74,14 @@ public class JimController : MonoBehaviour
             jimIsGrounded = true;
         }
        
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.name == "LevelEnd")
+        {
+            menuManager.NextLevel();
+        }
     }
 }
