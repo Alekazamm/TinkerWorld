@@ -11,7 +11,7 @@ public class DimController : MonoBehaviour
     public float dimmovementSpeed = 20;
 
     public bool dimisGrounded;
-    public MenuManager menuManager;
+    public GameManagerControl gameManager;
 
 
 
@@ -19,7 +19,7 @@ public class DimController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        gameManager = GetComponent<GameManagerControl>();
     }
 
     // Update is called once per frame
@@ -79,7 +79,7 @@ public class DimController : MonoBehaviour
     {
         if (collision.name == "LevelEnd")
         {
-            menuManager.NextLevel();
+            gameManager.NextLevel();
         }
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class JimController : MonoBehaviour
 {
 
@@ -12,13 +13,12 @@ public class JimController : MonoBehaviour
 
     public bool jimIsGrounded;
 
-    public MenuManager menuManager;
-
+    public GameManagerControl gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        menuManager = GetComponent<MenuManager>();
+        gameManager = GetComponent<GameManagerControl>();
     }
 
     // Update is called once per frame
@@ -81,7 +81,7 @@ public class JimController : MonoBehaviour
     {
         if(collision.name == "LevelEnd")
         {
-            menuManager.NextLevel();
+            gameManager.NextLevel();
         }
     }
 }

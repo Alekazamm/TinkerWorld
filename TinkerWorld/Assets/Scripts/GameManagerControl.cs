@@ -26,4 +26,9 @@ public class GameManagerControl : MonoBehaviour
     {
         level = PlayerPrefs.GetFloat("currentLevel");
     }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }
