@@ -20,11 +20,12 @@ public class CrateController : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.collider.name == "Button")
+        if (collision.name == "Button")
         {
             ButtonPushed();
+            Debug.Log("SUUUUUUU");
         }
     }
 
