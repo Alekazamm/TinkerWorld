@@ -13,12 +13,12 @@ public class JimController : MonoBehaviour
 
     public bool jimIsGrounded;
 
-    public GameManagerControl gameManager;
+   
 
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GetComponent<GameManagerControl>();
+        
     }
 
     // Update is called once per frame
@@ -81,7 +81,7 @@ public class JimController : MonoBehaviour
     {
         if(collision.name == "LevelEnd")
         {
-            gameManager.NextLevel();
+            GameManagerControl.NextLevel();
         }
     }
 }

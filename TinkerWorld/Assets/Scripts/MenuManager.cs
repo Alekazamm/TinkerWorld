@@ -29,10 +29,7 @@ public class MenuManager : MonoBehaviour
         PlayerPrefs.SetFloat("currentLevel", 1);
     }
 
-    public void NextLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+    
     
         
 }

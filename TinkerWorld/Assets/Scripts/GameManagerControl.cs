@@ -3,31 +3,19 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class GameManagerControl : MonoBehaviour
+public static class GameManagerControl
 {
 
-    public float level;
+    public static float level;
 
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(this);
-    }
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        level = PlayerPrefs.GetFloat("currentLevel");
-    }
+   
 
-    public void NextLevel()
+
+    public static void NextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
