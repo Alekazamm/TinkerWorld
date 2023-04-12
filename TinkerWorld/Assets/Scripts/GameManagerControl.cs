@@ -24,6 +24,6 @@ public class GameManagerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        level = PlayerPrefs.GetFloat("currentLevel");
     }
 }

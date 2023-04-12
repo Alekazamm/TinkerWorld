@@ -20,5 +20,8 @@ public class MenuManager : MonoBehaviour
     public void Play()
     {
         SceneManager.LoadScene(1);
+
+
+        PlayerPrefs.SetFloat("currentLevel", 1);
     }
 }
