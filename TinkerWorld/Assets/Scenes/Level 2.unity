@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 148800012}
   - component: {fileID: 148800011}
   m_Layer: 0
-  m_Name: Ground 2
+  m_Name: Ground
   m_TagString: Jumpable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -853,7 +853,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1925,7 +1925,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2001,8 +2001,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805337058}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.7070255, y: -5.2206907, z: 1.1390886}
-  m_LocalScale: {x: 2.0972, y: 0.3568, z: 1}
+  m_LocalPosition: {x: 5.7070255, y: -5.1859, z: 1.1390886}
+  m_LocalScale: {x: 2.0972, y: 0.42641166, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1831007063}

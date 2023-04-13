@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class CrateController : MonoBehaviour
 {
+
+    bool isTouchingButton;
+
 
     public GameObject deleteThis;
 
@@ -20,18 +24,30 @@ public class CrateController : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.name == "Button")
+        
+       
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.collider.name == "Button")
         {
-            ButtonPushed();
-          
+
+            deleteThis.SetActive(false);
+
+        }
+
+        if (collision.collider.name == "Ground")
+        {
+
+         
+            deleteThis.SetActive(true);
         }
     }
 
 
-    void ButtonPushed()
-    {
-        deleteThis.SetActive(false);
-    }
+
+
 }
