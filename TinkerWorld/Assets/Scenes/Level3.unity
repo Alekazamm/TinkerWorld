@@ -1504,6 +1504,7 @@ GameObject:
   - component: {fileID: 1454204081}
   - component: {fileID: 1454204080}
   - component: {fileID: 1454204084}
+  - component: {fileID: 1454204085}
   m_Layer: 0
   m_Name: Tin
   m_TagString: Jumpable
@@ -1657,6 +1658,18 @@ MonoBehaviour:
   lava: {fileID: 201186901}
   fallingPlatform1: {fileID: 1702737048}
   fallingPlatform2: {fileID: 439399796}
+--- !u!114 &1454204085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454204078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 976f10f7b3d65694f87b5943a467ed2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1493069788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,6 +1724,7 @@ GameObject:
   - component: {fileID: 1520363903}
   - component: {fileID: 1520363902}
   - component: {fileID: 1520363906}
+  - component: {fileID: 1520363907}
   m_Layer: 0
   m_Name: Ker
   m_TagString: Jumpable
@@ -1863,6 +1877,18 @@ MonoBehaviour:
   lava: {fileID: 201186901}
   fallingPlatform1: {fileID: 1702737048}
   fallingPlatform2: {fileID: 439399796}
+--- !u!114 &1520363907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520363900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 976f10f7b3d65694f87b5943a467ed2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1563547852
 GameObject:
   m_ObjectHideFlags: 0

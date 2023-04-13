@@ -20,7 +20,8 @@ public class lavaTouch : MonoBehaviour
     {
         if (collision.collider.name == "Lava")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Debug.Log("frogs");
         } 
 
     }
