@@ -1511,6 +1511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jimRb: {fileID: 1454204081}
+  ker: {fileID: 1520363900}
   jimMovementSpeed: 7
   jimIsGrounded: 0
 --- !u!50 &1454204081
