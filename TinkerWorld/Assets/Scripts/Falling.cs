@@ -2,30 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DrainButton : MonoBehaviour
+public class Falling : MonoBehaviour
 {
+
+    bool hastouchedbutton;
+
     public GameObject lava;
-    public GameObject fallingPlatform1, fallingPlatform2, fallingPlatform3;
-    // Start is called before the first frame update
-    void Start()
-    {
+    public GameObject fallingPlatform1, fallingPlatform2;
 
+    private void Start()
+    {
+        hastouchedbutton = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.name == "Button")
+        if (!hastouchedbutton)
         {
+            if (collision.collider.name == "Button")
+            {
+                hastouchedbutton = true;
+                StartCoroutine(FallingPlatform());
 
-            fallingPlatform1.SetActive(true);
-            fallingPlatform2.SetActive(true);
-            fallingPlatform3.SetActive(true);
+            }
         }
+        
 
+    }
+    private IEnumerator FallingPlatform()
+    {
+        fallingPlatform1.SetActive(true);
+        yield return new WaitForSeconds(1);
+        fallingPlatform2.SetActive(true);
+        yield return null;
     }
 }
