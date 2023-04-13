@@ -18,9 +18,13 @@ public class Falling : MonoBehaviour
     }
     private void Update()
     {
-        if (hasCountdownFinished && !hastouchedbutton)
+        if (hasCountdownFinished && !hastouchedbutton && lava.transform.position.y <= -3.5 )
         { 
             LavaRise();
+        }
+        if (hastouchedbutton && lava.transform.position.y >= -11 )
+        {
+            Lavafall();
         }
     }
 
@@ -49,7 +53,7 @@ public class Falling : MonoBehaviour
 
     public void Lavafall()
     {
-        lava.transform.Translate(new Vector2(0, -8));
+        lava.transform.Translate(new Vector2(0, -0.7f)* Time.deltaTime);
     }
     public void LavaRise()
     {
