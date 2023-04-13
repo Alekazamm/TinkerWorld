@@ -26,6 +26,7 @@ public class JimController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         doubleJump = false; 
     }
 
@@ -90,12 +91,13 @@ public class JimController : MonoBehaviour
         
 
        
-            jimRb.AddForce(new Vector2(0, 350));
+        jimRb.AddForce(new Vector2(0, 350));
 
         if(doubleJump)
         {
-            cooldownAnim.SetInteger("CooldownStatus", 1);
+            cooldownAnim.SetInteger("CooldownStatus", 2);
             StartCoroutine(CooldownBar());
+            doubleJump = false;
         }
          
         
@@ -106,8 +108,8 @@ public class JimController : MonoBehaviour
     public IEnumerator CooldownBar()
     {
 
-        yield return new WaitForSeconds(0.5f);
-        cooldownAnim.SetInteger("CoolDownStatus", 2);
+        yield return new WaitForSeconds(1f);
+        cooldownAnim.SetInteger("CooldownStatus", 1);
         yield return null;
     }
 
@@ -116,7 +118,8 @@ public class JimController : MonoBehaviour
         if(collision.collider.tag == "Jumpable")
         {
             jimIsGrounded = true;
-         
+            doubleJump = false;
+
 
             if (collision.collider.name == "Ker")
             {
