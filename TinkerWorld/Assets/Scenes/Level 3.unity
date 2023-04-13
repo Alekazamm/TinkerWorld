@@ -1710,6 +1710,7 @@ GameObject:
   - component: {fileID: 1520363904}
   - component: {fileID: 1520363903}
   - component: {fileID: 1520363902}
+  - component: {fileID: 1520363906}
   m_Layer: 0
   m_Name: Ker
   m_TagString: Jumpable
@@ -1846,6 +1847,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1520363906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520363900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d4b233fa4fa984ca062eeb4454da95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasCountdownFinished: 0
+  lava: {fileID: 201186901}
+  fallingPlatform1: {fileID: 1702737048}
+  fallingPlatform2: {fileID: 439399796}
 --- !u!1 &1563547852
 GameObject:
   m_ObjectHideFlags: 0
@@ -2629,7 +2646,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.5471698, g: 0.21886791, b: 0.24892014, a: 0}
+  m_BackGroundColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
