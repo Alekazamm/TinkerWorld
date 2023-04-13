@@ -8,6 +8,10 @@ public class JimController : MonoBehaviour
 
     public Rigidbody2D jimRb;
 
+    public GameObject ker;
+    bool isTouchingKer;
+
+
     float jimHorizontalInput;
     public float jimMovementSpeed = 20;
 
@@ -42,14 +46,29 @@ public class JimController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Jump();
-                jimIsGrounded = false;
+               
+                if (isTouchingKer && this.tag == "Jumpable")
+
+                {
+                    Jump();
+                    this.tag = "Untagged";
+                    ker.tag = "Untagged";
+                    jimIsGrounded = false;
+                }
+                else
+                {
+                    Jump();
+                    jimIsGrounded = false;
+
+                }
+
 
 
             }
 
-        }
 
+        }
+       
 
     }
 
@@ -62,7 +81,14 @@ public class JimController : MonoBehaviour
 
     void Jump()
     {
-        jimRb.AddForce(new Vector2(0, 350));
+        
+        
+
+       
+            jimRb.AddForce(new Vector2(0, 350));
+         
+        
+       
         
     }
 
@@ -72,6 +98,18 @@ public class JimController : MonoBehaviour
         if(collision.collider.tag == "Jumpable")
         {
             jimIsGrounded = true;
+         
+
+            if (collision.collider.name == "Ker")
+            {
+                isTouchingKer = true;
+            }
+            else
+            {
+                isTouchingKer = false;
+                this.tag = "Jumpable";
+                ker.tag = "Jumpable";
+            }
         }
 
         if (collision.collider.name == "LevelEnd")
