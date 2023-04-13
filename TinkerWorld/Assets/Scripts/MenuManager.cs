@@ -7,12 +7,12 @@ public class MenuManager : MonoBehaviour
 {
 
 
-    public GameObject levelSelectButton, levelSelectGroup;
+    public GameObject startMenu, levelSelectGroup;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        levelSelectGroup.SetActive(false);
     }
 
     // Update is called once per frame
@@ -31,7 +31,7 @@ public class MenuManager : MonoBehaviour
 
     public void LevelSelect()
     {
-        levelSelectButton.SetActive(false);
+        startMenu.SetActive(false);
         levelSelectGroup.SetActive(true);
     }
 
@@ -49,6 +49,13 @@ public class MenuManager : MonoBehaviour
     public void Level3()
     {
         SceneManager.LoadScene(3);
+    }
+
+
+    public void LevelSelectBackD()
+    {
+        startMenu.SetActive(true);
+        levelSelectGroup.SetActive(false);
     }
 
 
