@@ -17,4 +17,15 @@ public class DrainButton : MonoBehaviour
     {
 
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.name == "Button")
+        {
+
+            fallingPlatform1.SetActive(true);
+            fallingPlatform2.SetActive(true);
+            fallingPlatform3.SetActive(true);
+        }
+
+    }
 }
