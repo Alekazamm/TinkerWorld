@@ -6,6 +6,7 @@ public class Falling : MonoBehaviour
 {
 
     bool hastouchedbutton;
+    public bool hasCountdownFinished;
 
     public GameObject lava;
     public GameObject fallingPlatform1, fallingPlatform2;
@@ -13,6 +14,14 @@ public class Falling : MonoBehaviour
     private void Start()
     {
         hastouchedbutton = false;
+        hasCountdownFinished = false;
+    }
+    private void Update()
+    {
+        if (hasCountdownFinished && !hastouchedbutton)
+        { 
+            LavaRise();
+        }
     }
 
 
@@ -24,7 +33,7 @@ public class Falling : MonoBehaviour
             {
                 hastouchedbutton = true;
                 StartCoroutine(FallingPlatform());
-
+                Lavafall();
             }
         }
         
@@ -36,5 +45,14 @@ public class Falling : MonoBehaviour
         yield return new WaitForSeconds(1);
         fallingPlatform2.SetActive(true);
         yield return null;
+    }
+
+    public void Lavafall()
+    {
+        lava.transform.Translate(new Vector2(0, -8));
+    }
+    public void LavaRise()
+    {
+        lava.transform.Translate(new Vector2(0, 0.5f)* Time.deltaTime);
     }
 }

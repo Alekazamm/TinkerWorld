@@ -10,6 +10,8 @@ public class Countdown : MonoBehaviour
     public GameObject lava;
     [SerializeField]
     public TextMeshProUGUI text;
+    public Falling falling;
+    
 
     public void Start()
     {
@@ -28,6 +30,7 @@ public class Countdown : MonoBehaviour
         yield return new WaitForSeconds(1);
         text.SetText("");
         Lava();
+        falling.hasCountdownFinished = true;
         yield return null;
         
     }
@@ -38,4 +41,5 @@ public class Countdown : MonoBehaviour
         lava.SetActive(true);
     }
 
+    
 }
