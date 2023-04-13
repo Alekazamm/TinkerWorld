@@ -1610,7 +1610,7 @@ GameObject:
   - component: {fileID: 1488600857}
   - component: {fileID: 1488600856}
   m_Layer: 0
-  m_Name: Underground
+  m_Name: Ground
   m_TagString: Jumpable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
