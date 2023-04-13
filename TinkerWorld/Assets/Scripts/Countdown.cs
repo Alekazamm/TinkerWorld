@@ -7,6 +7,7 @@ public class Countdown : MonoBehaviour
 
 {
     public GameObject ground;
+    public GameObject lava;
     [SerializeField]
     public TextMeshProUGUI text;
 
@@ -19,11 +20,11 @@ public class Countdown : MonoBehaviour
 
     private IEnumerator Countdowns()
     {
-        text.SetText("3");
+        text.SetText("3!");
         yield return new WaitForSeconds(1);
-        text.SetText("2");
+        text.SetText("2!");
         yield return new WaitForSeconds(1);
-        text.SetText("1");
+        text.SetText("1!");
         yield return new WaitForSeconds(1);
         text.SetText("");
         Lava();
@@ -34,6 +35,7 @@ public class Countdown : MonoBehaviour
     public void Lava()
     {
         ground.SetActive(false);
+        lava.SetActive(true);
     }
 
 }
