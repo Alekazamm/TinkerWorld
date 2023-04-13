@@ -312,7 +312,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201186901}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.4099, y: -11.59, z: -0.01537246}
+  m_LocalPosition: {x: 3.4099, y: -11, z: -0.01537246}
   m_LocalScale: {x: 64.12287, y: 13.856304, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1652,6 +1652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d4b233fa4fa984ca062eeb4454da95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasCountdownFinished: 0
   lava: {fileID: 201186901}
   fallingPlatform1: {fileID: 1702737048}
   fallingPlatform2: {fileID: 439399796}
@@ -1857,7 +1858,7 @@ GameObject:
   - component: {fileID: 1563547854}
   m_Layer: 0
   m_Name: Button
-  m_TagString: Untagged
+  m_TagString: Jumpable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1870,8 +1871,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563547852}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.9266214, y: 3.1150558, z: -0.01537246}
-  m_LocalScale: {x: 2.0972, y: 0.38681, z: 1}
+  m_LocalPosition: {x: -7.7547, y: 3.1307, z: -0.01537246}
+  m_LocalScale: {x: 1.7532592, y: 0.35555574, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1493069789}
@@ -2477,6 +2478,7 @@ MonoBehaviour:
   ground: {fileID: 317063802}
   lava: {fileID: 201186901}
   text: {fileID: 1920955683}
+  falling: {fileID: 1454204084}
 --- !u!114 &1920955683
 MonoBehaviour:
   m_ObjectHideFlags: 0
