@@ -1712,6 +1712,7 @@ MonoBehaviour:
   ker: {fileID: 1520363900}
   jimMovementSpeed: 7
   jimIsGrounded: 0
+  cooldownAnim: {fileID: 129466781}
 --- !u!50 &1454204081
 Rigidbody2D:
   serializedVersion: 4

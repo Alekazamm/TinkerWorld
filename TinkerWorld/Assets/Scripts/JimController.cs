@@ -17,12 +17,16 @@ public class JimController : MonoBehaviour
 
     public bool jimIsGrounded;
 
+    public Animator cooldownAnim;
+
+    bool doubleJump;
+
    
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        doubleJump = false; 
     }
 
     // Update is called once per frame
@@ -54,6 +58,7 @@ public class JimController : MonoBehaviour
                     this.tag = "Untagged";
                     ker.tag = "Untagged";
                     jimIsGrounded = false;
+                    doubleJump = true;
                 }
                 else
                 {
@@ -86,12 +91,25 @@ public class JimController : MonoBehaviour
 
        
             jimRb.AddForce(new Vector2(0, 350));
+
+        if(doubleJump)
+        {
+            cooldownAnim.SetInteger("CooldownStatus", 1);
+            StartCoroutine(CooldownBar());
+        }
          
         
        
         
     }
 
+    public IEnumerator CooldownBar()
+    {
+
+        yield return new WaitForSeconds(0.5f);
+        cooldownAnim.SetInteger("CoolDownStatus", 2);
+        yield return null;
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
