@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Falling : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Falling : MonoBehaviour
 
     public GameObject lava;
     public GameObject fallingPlatform1, fallingPlatform2;
+    public GameObject fallingspike1, fallingspike2;
 
     private void Start()
     {
@@ -38,10 +40,18 @@ public class Falling : MonoBehaviour
                 hastouchedbutton = true;
                 StartCoroutine(FallingPlatform());
                 Lavafall();
+                StartCoroutine(FallingSpike());
             }
         }
-        
 
+    }
+
+    private IEnumerator FallingSpike()
+    {
+        fallingspike1.SetActive(true);
+        yield return new WaitForSeconds(1);
+        fallingspike2.SetActive(true);
+        yield return null;
     }
     private IEnumerator FallingPlatform()
     {
@@ -59,4 +69,6 @@ public class Falling : MonoBehaviour
     {
         lava.transform.Translate(new Vector2(0, 0.5f)* Time.deltaTime);
     }
+    
+   
 }

@@ -21,7 +21,14 @@ public class lavaTouch : MonoBehaviour
         if (collision.collider.name == "Lava")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        } 
-
+        }
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.name == "Fallingspike1" || collision.name == "Fallingspike2")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }
