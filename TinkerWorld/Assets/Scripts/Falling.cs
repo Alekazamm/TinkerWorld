@@ -11,7 +11,7 @@ public class Falling : MonoBehaviour
 
     public GameObject lava;
     public GameObject fallingPlatform1, fallingPlatform2;
-    public GameObject fallingspike1, fallingspike2;
+    public GameObject spikePrefab;
 
     private void Start()
     {
@@ -28,6 +28,7 @@ public class Falling : MonoBehaviour
         {
             Lavafall();
         }
+        
     }
 
 
@@ -40,19 +41,17 @@ public class Falling : MonoBehaviour
                 hastouchedbutton = true;
                 StartCoroutine(FallingPlatform());
                 Lavafall();
-                StartCoroutine(FallingSpike());
+                FallingSpike();
             }
         }
 
     }
 
-    private IEnumerator FallingSpike()
+    public void FallingSpike()
     {
-        fallingspike1.SetActive(true);
-        yield return new WaitForSeconds(1);
-        fallingspike2.SetActive(true);
-        yield return null;
+        InvokeRepeating("spawnSpike", 1, 0.8f);
     }
+
     private IEnumerator FallingPlatform()
     {
         fallingPlatform1.SetActive(true);
@@ -69,6 +68,11 @@ public class Falling : MonoBehaviour
     {
         lava.transform.Translate(new Vector2(0, 0.5f)* Time.deltaTime);
     }
-    
-   
+
+    public void spawnSpike()
+    {
+        Vector2 randomSpawnPosition = new Vector2(Random.Range(-10, 20), 16.4f);
+        Instantiate(spikePrefab, randomSpawnPosition, Quaternion.identity);
+    }
+
 }
