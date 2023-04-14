@@ -586,7 +586,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &439399797
 Transform:
   m_ObjectHideFlags: 0
@@ -820,12 +820,12 @@ GameObject:
   - component: {fileID: 551135142}
   - component: {fileID: 551135141}
   m_Layer: 0
-  m_Name: fallingspike2
+  m_Name: fallingspike1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &551135140
 Transform:
   m_ObjectHideFlags: 0
@@ -833,13 +833,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551135139}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.81, y: 16.37, z: -0.01537246}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.8099995, y: 16.37, z: -0.01537246}
   m_LocalScale: {x: -0.81580484, y: 3.5920236, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1493069789}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &551135141
 Rigidbody2D:
@@ -1897,6 +1897,8 @@ MonoBehaviour:
   lava: {fileID: 201186901}
   fallingPlatform1: {fileID: 1702737048}
   fallingPlatform2: {fileID: 439399796}
+  fallingspike1: {fileID: 551135139}
+  fallingspike2: {fileID: 1746313080}
 --- !u!114 &1454204085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1944,8 +1946,8 @@ Transform:
   - {fileID: 1905427054}
   - {fileID: 1702737049}
   - {fileID: 439399797}
-  - {fileID: 1746313081}
   - {fileID: 551135140}
+  - {fileID: 1746313081}
   - {fileID: 201186903}
   - {fileID: 1563547853}
   m_Father: {fileID: 0}
@@ -2119,6 +2121,8 @@ MonoBehaviour:
   lava: {fileID: 201186901}
   fallingPlatform1: {fileID: 1702737048}
   fallingPlatform2: {fileID: 439399796}
+  fallingspike1: {fileID: 551135139}
+  fallingspike2: {fileID: 1746313080}
 --- !u!114 &1520363907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2260,7 +2264,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1702737049
 Transform:
   m_ObjectHideFlags: 0
@@ -2500,12 +2504,12 @@ GameObject:
   - component: {fileID: 1746313083}
   - component: {fileID: 1746313082}
   m_Layer: 0
-  m_Name: fallingspike1
+  m_Name: fallingspike2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1746313081
 Transform:
   m_ObjectHideFlags: 0
@@ -2519,7 +2523,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1493069789}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1746313082
 Rigidbody2D:
