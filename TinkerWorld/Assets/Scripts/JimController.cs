@@ -22,6 +22,8 @@ public class JimController : MonoBehaviour
 
     public Slider cooldownSlider;
 
+    public bool cooldownSliderBool;
+
  
 
    
@@ -30,7 +32,7 @@ public class JimController : MonoBehaviour
     void Start()
     {
       
-     
+     cooldownSliderBool = false;
     }
 
     // Update is called once per frame
@@ -55,13 +57,14 @@ public class JimController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                
-                if (isTouchingKer && this.tag == "Jumpable")
+                if (isTouchingKer && this.tag == "Jumpable" && !cooldownSliderBool)
 
                 {
                     Jump();
                     this.tag = "Untagged";
                     ker.tag = "Untagged";
                     jimIsGrounded = false;
+                    cooldownSliderBool = true;
                  
                 }
                 else
@@ -77,19 +80,48 @@ public class JimController : MonoBehaviour
 
 
         }
+
+        if (cooldownSliderBool)
+        {
+                
+            CooldownDown();
+            
+        }if(cooldownSlider.value == 0)
+        {
+
+            StartCoroutine(Cooldown(3));
+
+        }
+
+
+        if (!cooldownSliderBool)
+        {
+            CooldownUp();
+        }
+        //else if(!cooldownSliderBool)
+       // {
+          // CooldownUp();
+        //}
        
+
+    }
+
+    private IEnumerator Cooldown(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        cooldownSliderBool = false;
 
     }
 
 
     void CooldownUp()
     {
-
+        cooldownSlider.value += 0.02f;
     }
 
     void CooldownDown()
     {
-
+        cooldownSlider.value -= 0.02f;
     }
 
     private void FixedUpdate()
