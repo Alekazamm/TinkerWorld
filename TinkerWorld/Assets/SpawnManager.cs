@@ -14,9 +14,5 @@ public class SpawnManager : MonoBehaviour
        
     }
 
-    public void spawnspike()
-    {
-        Vector2 randomSpawnPosition = new Vector2(Random.Range(-10, 20), 16.4f);
-        Instantiate(spikePrefab, randomSpawnPosition, Quaternion.identity);
-    }
+    
 }
