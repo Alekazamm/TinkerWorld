@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.ConstrainedExecution;
 using UnityEngine;
 
 public class DimController : MonoBehaviour
@@ -11,6 +12,14 @@ public class DimController : MonoBehaviour
     public float dimmovementSpeed = 20;
 
     public bool dimisGrounded;
+
+
+    bool isTouchingJim;
+    public GameObject tin;
+
+    bool cooldownSlider;
+
+    private JimController jimController;
    
 
 
@@ -19,12 +28,16 @@ public class DimController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
+      jimController = GameObject.Find("Tin").GetComponent<JimController>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        cooldownSlider = jimController.cooldownSliderBool;
+
+
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             dimHorizontalInput = -1 * dimmovementSpeed;
@@ -39,13 +52,28 @@ public class DimController : MonoBehaviour
 
         if (dimisGrounded)
         {
+
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                dimJump();
-                dimisGrounded = false;
+                if (isTouchingJim && this.tag == "Jumpable" && !cooldownSlider)
 
+                {
+                    dimJump();
 
+                    dimisGrounded = false;
+                    cooldownSlider = true;
+
+                }
+                else
+                {
+                    dimJump();
+                    dimisGrounded = false;
+
+                }
             }
+
+           
+
 
         }
 
@@ -71,6 +99,16 @@ public class DimController : MonoBehaviour
         if (collision.collider.tag == "Jumpable")
         {
             dimisGrounded = true;
+
+            if (collision.collider.name == "Tin")
+            {
+                isTouchingJim = true;
+            }
+            else
+            {
+                isTouchingJim = false;
+             
+            }
         }
 
         if (collision.collider.name == "LevelEnd")
