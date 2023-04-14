@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 
@@ -16,18 +17,20 @@ public class JimController : MonoBehaviour
     public float jimMovementSpeed = 20;
 
     public bool jimIsGrounded;
-
+    
     public Animator cooldownAnim;
 
-    bool doubleJump;
+    public Slider cooldownSlider;
+
+ 
 
    
 
     // Start is called before the first frame update
     void Start()
     {
-
-        doubleJump = false; 
+      
+     
     }
 
     // Update is called once per frame
@@ -59,7 +62,7 @@ public class JimController : MonoBehaviour
                     this.tag = "Untagged";
                     ker.tag = "Untagged";
                     jimIsGrounded = false;
-                    doubleJump = true;
+                 
                 }
                 else
                 {
@@ -78,6 +81,17 @@ public class JimController : MonoBehaviour
 
     }
 
+
+    void CooldownUp()
+    {
+
+    }
+
+    void CooldownDown()
+    {
+
+    }
+
     private void FixedUpdate()
     {
         transform.Translate(new Vector2(jimHorizontalInput * Time.deltaTime, 0));
@@ -93,32 +107,21 @@ public class JimController : MonoBehaviour
        
         jimRb.AddForce(new Vector2(0, 350));
 
-        if(doubleJump)
-        {
-            cooldownAnim.SetInteger("CooldownStatus", 2);
-            StartCoroutine(CooldownBar());
-            doubleJump = false;
-        }
+     
          
         
        
         
     }
 
-    public IEnumerator CooldownBar()
-    {
 
-        yield return new WaitForSeconds(1f);
-        cooldownAnim.SetInteger("CooldownStatus", 1);
-        yield return null;
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.collider.tag == "Jumpable")
         {
             jimIsGrounded = true;
-            doubleJump = false;
+         
 
 
             if (collision.collider.name == "Ker")
