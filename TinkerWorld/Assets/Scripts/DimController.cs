@@ -61,7 +61,7 @@ public class DimController : MonoBehaviour
                     dimJump();
 
                     dimisGrounded = false;
-                    cooldownSlider = true;
+                   
 
                 }
                 else
