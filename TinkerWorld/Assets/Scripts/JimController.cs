@@ -113,7 +113,11 @@ public class JimController : MonoBehaviour
         this.tag = "Untagged";
         ker.tag = "Untagged";
         yield return new WaitForSeconds(delay);
+
         cooldownSliderBool = false;
+        this.tag = "Jumpable";
+        ker.tag = "Jumpable";
+
 
     }
 
