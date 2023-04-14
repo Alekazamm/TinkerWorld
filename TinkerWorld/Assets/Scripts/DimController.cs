@@ -52,23 +52,27 @@ public class DimController : MonoBehaviour
 
         if (dimisGrounded)
         {
-         
 
-            if (isTouchingJim && this.tag == "Jumpable" && !cooldownSlider)
-
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                dimJump();
-              
-                dimisGrounded = false;
-                cooldownSlider = true;
+                if (isTouchingJim && this.tag == "Jumpable" && !cooldownSlider)
 
-            }
-            else
-            {
-                dimJump();
-                dimisGrounded = false;
+                {
+                    dimJump();
 
+                    dimisGrounded = false;
+                    cooldownSlider = true;
+
+                }
+                else
+                {
+                    dimJump();
+                    dimisGrounded = false;
+
+                }
             }
+
+           
 
 
         }
@@ -96,7 +100,7 @@ public class DimController : MonoBehaviour
         {
             dimisGrounded = true;
 
-            if (collision.collider.name == "Ker")
+            if (collision.collider.name == "Tin")
             {
                 isTouchingJim = true;
             }

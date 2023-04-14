@@ -108,6 +108,9 @@ public class JimController : MonoBehaviour
 
     private IEnumerator Cooldown(float delay)
     {
+        isTouchingKer = false;
+        this.tag = "Untagged";
+        ker.tag = "Untagged";
         yield return new WaitForSeconds(delay);
         cooldownSliderBool = false;
 
