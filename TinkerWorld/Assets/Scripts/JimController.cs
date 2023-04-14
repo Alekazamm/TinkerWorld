@@ -18,9 +18,9 @@ public class JimController : MonoBehaviour
 
     public bool jimIsGrounded;
     
-    public Animator cooldownAnim;
+  
 
-    public Slider cooldownSlider;
+    private Slider cooldownSlider;
 
     public bool cooldownSliderBool;
 
@@ -32,7 +32,8 @@ public class JimController : MonoBehaviour
     void Start()
     {
       
-     cooldownSliderBool = false;
+        cooldownSlider = GameObject.Find("DBSlider").GetComponent<Slider>();
+        cooldownSliderBool = false;
     }
 
     // Update is called once per frame
