@@ -27,6 +27,8 @@ public class MenuManager : MonoBehaviour
 
 
         PlayerPrefs.SetFloat("currentLevel", 1);
+
+       
     }
 
     public void LevelSelect()
