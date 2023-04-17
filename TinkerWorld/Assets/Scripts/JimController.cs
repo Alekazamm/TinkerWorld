@@ -9,6 +9,7 @@ public class JimController : MonoBehaviour
     public Rigidbody2D jimRb;
 
     public GameObject ker;
+    public GameObject doublejump;
     bool isTouchingKer;
 
 
@@ -32,16 +33,19 @@ public class JimController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       if(GameManagerControl.level > 1)
-        {
-            cooldownSlider = GameObject.Find("DBSlider").GetComponent<Slider>();
-            cooldownSliderBool = false;
-        }
-     
+        cooldownSlider = GameObject.Find("DBSlider").GetComponent<Slider>();
+        cooldownSliderBool = false;
 
- 
-        
+        if (GameManagerControl.level == 1)
+        {
+            doublejump.SetActive(false);
             
+            
+        }
+        else
+        {
+            doublejump.SetActive(true);
+        }
     }
 
     // Update is called once per frame
