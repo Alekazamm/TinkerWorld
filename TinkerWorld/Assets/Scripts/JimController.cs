@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -22,6 +23,8 @@ public class JimController : MonoBehaviour
 
     public bool cooldownSliderBool;
 
+    
+
 
 
 
@@ -32,6 +35,10 @@ public class JimController : MonoBehaviour
 
         cooldownSlider = GameObject.Find("DBSlider").GetComponent<Slider>();
         cooldownSliderBool = false;
+
+ 
+        
+            
     }
 
     // Update is called once per frame
