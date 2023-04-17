@@ -36,16 +36,7 @@ public class JimController : MonoBehaviour
         cooldownSlider = GameObject.Find("DBSlider").GetComponent<Slider>();
         cooldownSliderBool = false;
 
-        if (GameManagerControl.level == 1)
-        {
-            doublejump.SetActive(false);
-            
-            
-        }
-        else
-        {
-            doublejump.SetActive(true);
-        }
+        //if (GameManagerControl.level == 1) {doublejump.SetActive(false) else {doublejump.SetActive(true);}
     }
 
     // Update is called once per frame

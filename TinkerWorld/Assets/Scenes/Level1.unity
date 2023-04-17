@@ -2056,6 +2056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jimRb: {fileID: 1547482675}
   ker: {fileID: 1213484441}
+  doublejump: {fileID: 0}
   jimMovementSpeed: 7
   jimIsGrounded: 0
   cooldownSliderBool: 0

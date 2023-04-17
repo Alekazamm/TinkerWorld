@@ -1583,7 +1583,7 @@ GameObject:
   - component: {fileID: 1454204080}
   m_Layer: 0
   m_Name: Tin
-  m_TagString: Untagged
+  m_TagString: Jumpable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1617,6 +1617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jimRb: {fileID: 1454204081}
   ker: {fileID: 1520363900}
+  doublejump: {fileID: 0}
   jimMovementSpeed: 7
   jimIsGrounded: 0
   cooldownSliderBool: 0
@@ -1884,7 +1885,7 @@ GameObject:
   - component: {fileID: 1520363902}
   m_Layer: 0
   m_Name: Ker
-  m_TagString: Untagged
+  m_TagString: Jumpable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
