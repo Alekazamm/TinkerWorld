@@ -26,7 +26,7 @@ public class lavaTouch : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.name == "fallingspike1" || collision.name == "fallingspike2")
+        if (collision.name == "fallingspike1(Clone)")
         {
             death();
             
