@@ -32,9 +32,12 @@ public class JimController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        cooldownSlider = GameObject.Find("DBSlider").GetComponent<Slider>();
-        cooldownSliderBool = false;
+       if(GameManagerControl.level > 1)
+        {
+            cooldownSlider = GameObject.Find("DBSlider").GetComponent<Slider>();
+            cooldownSliderBool = false;
+        }
+     
 
  
         
