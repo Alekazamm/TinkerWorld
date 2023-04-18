@@ -940,7 +940,7 @@ GameObject:
   - component: {fileID: 581679355}
   - component: {fileID: 581679354}
   m_Layer: 5
-  m_Name: SpaceKey_Text
+  m_Name: Platforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1321,7 +1321,7 @@ GameObject:
   - component: {fileID: 933622293}
   - component: {fileID: 933622292}
   m_Layer: 5
-  m_Name: ArrowKeys_Text (1)
+  m_Name: crate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1344,8 +1344,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -431.79, y: -208.56}
-  m_SizeDelta: {x: 2.6633, y: 1.1726}
+  m_AnchoredPosition: {x: -432.34, y: -209.25}
+  m_SizeDelta: {x: 4.1024, y: 1.7374}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &933622292
 MonoBehaviour:
@@ -1367,7 +1367,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Crates
+  m_text: 'Crates
+
+    Contrain crate controller script'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1394,8 +1396,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.7
-  m_fontSizeBase: 0.7
+  m_fontSize: 0.5
+  m_fontSizeBase: 0.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1944,7 +1946,7 @@ GameObject:
   - component: {fileID: 1626796886}
   - component: {fileID: 1626796885}
   m_Layer: 5
-  m_Name: ArrowKeys_Text
+  m_Name: Characters
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1990,7 +1992,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Characters- Tink,Ker
+  m_text: 'Characters- Tin,Ker
 
 '
   m_isRightToLeft: 0
@@ -2350,7 +2352,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button needs name button
+  m_text: 'Button needs name: button'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

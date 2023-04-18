@@ -805,6 +805,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoubleJumpCooldown
       objectReference: {fileID: 0}
+    - target: {fileID: 1580677135912263365, guid: 9be5b0eaa2bada54cbaafe761edcb89f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be5b0eaa2bada54cbaafe761edcb89f, type: 3}
 --- !u!1 &595276932
@@ -1646,6 +1650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jimRb: {fileID: 1454204081}
   ker: {fileID: 1520363900}
+  doublejump: {fileID: 1580677135912263365, guid: 9be5b0eaa2bada54cbaafe761edcb89f, type: 3}
   jimMovementSpeed: 7
   jimIsGrounded: 0
   cooldownSliderBool: 0
