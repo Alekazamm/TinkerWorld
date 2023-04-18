@@ -1869,12 +1869,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoubleJumpCooldown
       objectReference: {fileID: 0}
-    - target: {fileID: 1580677135912263365, guid: 9be5b0eaa2bada54cbaafe761edcb89f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be5b0eaa2bada54cbaafe761edcb89f, type: 3}
+--- !u!225 &1349436623 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 7535682815201063308, guid: 9be5b0eaa2bada54cbaafe761edcb89f, type: 3}
+  m_PrefabInstance: {fileID: 1349436622}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1487843423
 GameObject:
   m_ObjectHideFlags: 0
@@ -2138,6 +2139,7 @@ MonoBehaviour:
   jimMovementSpeed: 7
   jimIsGrounded: 0
   cooldownSliderBool: 0
+  sliderGroup: {fileID: 1349436623}
 --- !u!1 &1547907689
 GameObject:
   m_ObjectHideFlags: 0

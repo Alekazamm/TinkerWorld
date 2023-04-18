@@ -2244,6 +2244,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1580677135382800365, guid: 9be5b0eaa2bada54cbaafe761edcb89f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1580677135912263361, guid: 9be5b0eaa2bada54cbaafe761edcb89f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2332,5 +2336,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1580677135912263365, guid: 9be5b0eaa2bada54cbaafe761edcb89f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be5b0eaa2bada54cbaafe761edcb89f, type: 3}
+--- !u!1 &1580677135414773927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1580677135912263365, guid: 9be5b0eaa2bada54cbaafe761edcb89f, type: 3}
+  m_PrefabInstance: {fileID: 1580677135414773926}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &1580677135414773928
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580677135414773927}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

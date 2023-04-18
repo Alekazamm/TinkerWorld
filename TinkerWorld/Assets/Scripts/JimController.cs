@@ -24,6 +24,9 @@ public class JimController : MonoBehaviour
 
     public bool cooldownSliderBool;
 
+    public CanvasGroup sliderGroup;
+
+
     
 
 
@@ -45,8 +48,14 @@ public class JimController : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
+            sliderGroup.alpha = 0;
             cooldownSlider.value = 0;
         }
+        else
+        {
+            sliderGroup.alpha = 1;
+        }
+      
 
         if (Input.GetKey(KeyCode.A))
         {

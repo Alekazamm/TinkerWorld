@@ -811,6 +811,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be5b0eaa2bada54cbaafe761edcb89f, type: 3}
+--- !u!225 &545868216 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 7535682815201063308, guid: 9be5b0eaa2bada54cbaafe761edcb89f, type: 3}
+  m_PrefabInstance: {fileID: 545868215}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &595276932
 GameObject:
   m_ObjectHideFlags: 0
@@ -1654,6 +1659,7 @@ MonoBehaviour:
   jimMovementSpeed: 7
   jimIsGrounded: 0
   cooldownSliderBool: 0
+  sliderGroup: {fileID: 545868216}
 --- !u!50 &1454204081
 Rigidbody2D:
   serializedVersion: 4
