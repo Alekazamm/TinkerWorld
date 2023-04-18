@@ -33,16 +33,20 @@ public class JimController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cooldownSlider = GameObject.Find("DBSlider").GetComponent<Slider>();
-        cooldownSliderBool = false;
-
+            cooldownSlider = GameObject.Find("DBSlider").GetComponent<Slider>();
+            cooldownSliderBool = false;
+        
+        
         //if (GameManagerControl.level == 1) {doublejump.SetActive(false) else {doublejump.SetActive(true);}
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            cooldownSlider.value = 0;
+        }
 
         if (Input.GetKey(KeyCode.A))
         {
@@ -84,36 +88,33 @@ public class JimController : MonoBehaviour
 
 
         }
-
-        if (cooldownSliderBool)
-        {
-
-            CooldownDown();
-
-        }
+        
+            if (cooldownSliderBool)
+            {
+                CooldownDown();
+            }
 
 
-        if (cooldownSlider.value == 0)
-        {
-            this.tag = "Untagged";
-            ker.tag = "Untagged";
+            if (cooldownSlider.value == 0)
+            {
+                this.tag = "Untagged";
+                ker.tag = "Untagged";
 
-            cooldownSliderBool = false;
+                cooldownSliderBool = false;
 
-        }
+            }
 
-        if(cooldownSlider.value == 1)
-        {
-            this.tag = "Jumpable";
-            ker.tag = "Jumpable";
-        }
+            if (cooldownSlider.value == 1)
+            {
+                this.tag = "Jumpable";
+                ker.tag = "Jumpable";
+            }
 
 
-        if (!cooldownSliderBool)
-        {
-            CooldownUp();
-        }
-
+            if (!cooldownSliderBool)
+            {
+                CooldownUp();
+            }
 
     }
 
